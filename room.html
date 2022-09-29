@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hostel Room</title>
+    <meta name="viewport" content="width=devices-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="room.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <header>
+    <h1>Welcome</h1>
+  </header>
+  <body>
+    <div class="hostel-form">
+      <form action="">
+        <h2>Hostel Form</h2>
+        <h4>Select Hostel Floor:
+          <select class="sign">
+            <option value="Please Select">Please Select Floor</option>
+            <option value="1">100 Series</option>
+            <option value="2">200 Series</option>
+            <option value="3">300 Series</option>
+          </select></h4>
+          <h4>Select Hostel Room:
+            <select class="name">
+              <option value="-1">Please Select Room</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select></h4>
+            <h4>Select Bed-Space:
+              <select class="post">
+                  <option value="-1">Please Select Bed-Space</option>
+                  <option value="1">A</option>
+                  <option value="2">B</option>
+                  <option value="3">C</option>
+                  <option value="4">D</option>
+                </select>
+            </h4>
+            <hr>
+        <input type="submit" class="btn_1" value="Submit">
+        <i class="fas fa-times"></i>
+        
+      </form>
+    </div>
+
+
+
+    <section class="gallery" id="gallery">
+      <h2>Select hostel of choice with utmost ease.</h2>
+      <div class="box-container">
+        <div class="box">
+          <img src="hostelone.jpeg" alt="" />
+          <div class="current">
+            <h3>Akintola Hall</h3>
+            <h4>Gender: Male</h4>
+            <p>Bunk bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel" class="btn">Click To Reserve</div> -->
+            <!-- <a href="Hostel A.html" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="hostelthree.jpeg" alt="" />
+          <div class="current">
+            <h3>Okafor Hall</h3>
+            <h4>Gender: Male</h4>
+            <p>Single bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel_1" class="btn">Click To Reserve</div> -->
+            <!-- <a href="#" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="hosteltwo.jpeg" alt="" />
+          <div class="current">
+            <h3>Bello Hall</h3>
+            <h4>Gender: Male</h4>
+            <p>Bunk bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel_2" class="btn">Click To Reserve</div> -->
+            <!-- <a href="#" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="hostelfive.jpeg" alt="" />
+          <div class="current">
+            <h3>Ibiam Hall</h3>
+            <h4>Gender: Female</h4>
+            <p>Bunk bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel_3" class="btn">Click To Reserve</div> -->
+            <!-- <a href="#" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="hostelfour.jpeg" alt="" />
+          <div class="current">
+            <h3>Amina Hall</h3>
+            <h4>Gender: Female</h4>
+            <p>Single bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel_4" class="btn">Click To Reserve</div> -->
+            <!-- <a href="#" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="hostelroom.jpeg" alt="" />
+          <div class="current">
+            <h3>Okeke Hall</h3>
+            <h4>Gender: Female</h4>
+            <p>Bunk bed-space</p>
+            <a href="hostelform.html" class="btn">Click to Reserve</a>
+            <!-- <div id="hostel_5" class="btn">Click To Reserve</div> -->
+            <!-- <a href="#" class="btn">Click To Reserve</a> -->
+          </div>
+        </div>
+        <a href="index.html" class="button" id="main">Log Out</a>
+      </div>
+      
+      
+    </section>
+
+
+    <footer id="footer">
+      <div class="container">
+        <h2>Hostel Portal Closes in</h2>
+      </div>
+      <div id="timer"></div>
+    </footer>
+
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Oct 15, 2022 15:37:25").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("timer").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+
+
+      $('#hostel').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+
+      $('#hostel_1').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+      $('#hostel_2').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+      $('#hostel_3').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+      $('#hostel_4').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+
+      $('#hostel_5').click(function(){
+        $('.hostel-form').addClass('popup');
+      });
+
+      $('.hostel-form form .fa-times').click(function(){
+        $('.hostel-form').removeClass('popup');
+      });
+
+
+
+      
+
+
+      
+    </script>
+  </body>
+</html>

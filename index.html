@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel Allocation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="menu"><i class="fa fa-bars"></i></div>
+      <a href="#" class="logo"
+        ><i class="fas fa-graduation-cap"></i><span>Zim</span> College</a
+      >
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <br />
+          <li><a href="#contact">Contact</a></li>
+          <br />
+
+          <a href="Loginpage.html" id="login" class="button">Login</a
+          ><br />
+          <div id="signup" class="btn_2">Signup</div>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- <div class="login-form">
+      <form action="room.html">
+        <h2>Login</h2>
+        <input type="text" id="user" placeholder="Enter Matric Number" class="box" required>
+        <input type="password" id="password" placeholder="Enter Password" class="box" minlength="8"  maxlength="15" required>
+        <p>forgot password?<a href="#"> Click Here</a></p>
+        
+        <input type="checkbox" id="password1">
+        <label for="password1">Remember password</label>
+        <input type="submit" class="btn_3" value="Login">
+        <i class="fas fa-times"></i>
+        
+      </form>
+    </div> -->
+
+    <div class="signup-form">
+      <form
+        action=""
+        name="f1"
+        method="post"
+        onsubmit="return matchpass()"
+      >
+        <h2>Register</h2>
+        <label>Full Name:</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Full Name"
+          required
+        /><br /><br />
+        <label>Matric Number:</label><br />
+        <input
+          type="text"
+          name="matric"
+          id="name"
+          placeholder="Enter Matric Number"
+          required
+        /><br /><br />
+        <label>Email Address:</label><br />
+        <input
+          type="email"
+          name="email"
+          id="name"
+          placeholder="Enter Email..."
+          required
+        /><br /><br />
+        <label>Password:</label><br />
+        <input
+          type="password"
+          name="password"
+          id="name"
+          placeholder="Create Password"
+          required
+        /><br /><br />
+        <label>Confirm Password:</label><br />
+        <input
+          type="password"
+          name="password2"
+          id="name"
+          placeholder="Confirm Password"
+        /><br /><br />
+        <input
+          type="submit"
+          value="Submit"
+          class="btn_3"
+          id="submit"
+          
+        />
+        <!-- <a href="" class="btn_3" id="submit"></a> -->
+        <!-- <button onclick="myFunction()" class="btn_3" id="submit">Submit</button> -->
+        <i class="fas fa-times"></i>
+      </form>
+    </div>
+
+    <section class="home" id="home">
+      <div class="box">
+        <div class="text">
+          <h1>Welcome</h1>
+          <p>Reserve Bed-Space of Choice with utmost ease</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="hostelroom.jpeg" alt="" class="slide" />
+      </div>
+      <div class="image_item">
+        <img
+          src="hostelroom.jpeg"
+          alt=""
+          class="slide active"
+          onclick="img('hostelroom.jpeg')"
+        />
+        <img
+          src="hostelfive.jpeg"
+          alt=""
+          class="slide"
+          onclick="img('hostelfive.jpeg')"
+        />
+        <img
+          src="hostelthree.jpeg"
+          alt=""
+          class="slide"
+          onclick="img('hostelthree.jpeg')"
+        />
+        <img
+          src="hosteltwo.jpeg"
+          alt=""
+          class="slide"
+          onclick="img('hosteltwo.jpeg')"
+        />
+      </div>
+
+      <div class="content"></div>
+    </section>
+
+    <section class="services" id="services">
+      <h1 class="heading">Services</h1>
+      <div class="box-container container">
+        <div class="box">
+          <h3>Accessible</h3>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Pre-designed to be accessed from any location</p>
+        </div>
+
+        <div class="box">
+          <h3>Easy Hostel Booking</h3>
+          <i class="fa fa-hotel"></i>
+          <p>Easy for students to apply for hostel rooms of their choice</p>
+        </div>
+
+        <div class="box">
+          <h3>Generate Report</h3>
+          <i class="fa fa-file"></i>
+          <p>Quickly generate information and print reports</p>
+        </div>
+      </div>
+
+      <div class="control"></div>
+    </section>
+    <section id="gallery" class="gallery">
+      <h1>Gallery</h1>
+      <p>Here are some of our pictures</p>
+
+      <div class="row">
+        <div class="column">
+          <img src="room.jpeg" alt="" />
+          <img src="building.jpeg" alt="" />
+          <img src="hostelthree.jpeg" alt="" />
+          <img src="hostelfour.jpeg" alt="" />
+        </div>
+        <div class="column">
+          <img src="hosteltwo.jpeg" alt="" />
+          <img src="hostelone.jpeg" alt="" />
+          <img src="images (7).jpeg" alt="" />
+          <img src="hostelfive.jpeg" alt="" />
+        </div>
+        <div class="column">
+          <img src="images (2).jpeg" alt="" />
+          <img src="images (5).jpeg" alt="" />
+          <img src="images (4).jpeg" alt="" />
+          <img src="hostelone.jpeg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="top">Contact Us</h2>
+      <div class="container container">
+        <div class="box">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>location:</h3>
+          <p>
+            Plot 652, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-envelope"></i>
+          <h3>Email:</h3>
+          <p>hostels@zimcollege.edu.ng</p>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-phone"></i>
+          <h3>Call:</h3>
+          <p>+234 904 472 8629</p>
+        </div>
+      </div>
+
+      <div class="complaints" id="complaints">
+        <h3 class="position">For Any Complaints;</h3>
+        <form action="">
+          <span>Name:</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name..."
+            class="box"
+            required
+          />
+          <span>Email Address:</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email address..."
+            class="box"
+            required
+          />
+          <span>subject</span>
+          <input type="text" name="subject" placeholder="Subject" class="box" />
+          <span>Message</span>
+          <textarea
+            name="message"
+            id="message"
+            class="box"
+            cols="10"
+            rows="5"
+          ></textarea>
+          <input type="submit" value="submit" name="submit" class="link-btn" />
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="current">
+        <h1>Subscribe To Our Newsletter</h1>
+        <h3>Get latest updates on opening and deadline of our hostels</h3>
+        <form action="" onsubmit= "return myHandler()">
+          <input
+            type="email"
+            placeholder="Enter Email..."
+            class="box"
+            required
+          /><br />
+          <button class="button_1">Subscribe</button>
+        </form>
+      </div>
+      <div class="credit">
+        &copy; Copyright <strong>ZIM COLLEGE</strong>. All rights reserved
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $("#menu").click(function () {
+        $(this).toggleClass("bar");
+        $(".navbar").toggleClass("nav-toggle");
+        let menu = document.querySelector("#menu");
+        // let navbar = document.querySelector('header .navbar');
+        // menu.onclick = () =>{
+        //   menu.classList.toggle('fa-times');
+        // }
+      });
+
+      $("#login").click(function () {
+        $(".login-form").addClass("popup");
+      });
+
+      $(".login-form form .fa-times").click(function () {
+        $(".login-form").removeClass("popup");
+      });
+
+      $("window").on("load scroll", function () {
+        $("#menu").removeClass("fa-times");
+        $(".navbar").removeClass("nav-toggle");
+
+        $(".login-form").removeClass("popup");
+
+        $("section").each(function () {
+          let top = $("window").scrollTop();
+          let height = $(this).height();
+          let id = $(this).attr("id");
+          let offset = $(this).offset().top - 200;
+
+          if (top > offset && top < offset + height) {
+            $(".navbar ul li a").removeClass("active");
+            $(".navbar").find('[href="#${id}"]').addClass("active");
+          }
+        });
+      });
+    });
+
+    $("#signup").click(function () {
+      $(".signup-form").addClass("popup");
+    });
+
+    $(".signup-form form .fa-times").click(function () {
+      $(".signup-form").removeClass("popup");
+    });
+
+    function img(anything) {
+      document.querySelector(".slide").src = anything;
+    }
+    function change(change) {
+      const line = document.querySelector(".image");
+      line.style.background = change;
+    }
+
+    // function validateform() {
+    //   var name = document.myForm.name.value;
+    //   var matric = document.myForm.matric.value;
+    //   var password = document.myForm.psw.value;
+    //   var password1 = document.myForm.user.value;
+
+    //   if (name == null || name == "") {
+    //     alert("Name can't be blank");
+    //     return false;
+    //   } else if (password.length < 6) {
+    //     alert("Password must be at least 6 characters long.");
+    //     return false;
+    //   }
+    // }
+
+    // function myFunction() {
+    //   alert("You will receive an email to confirm complete registration");
+    // }
+    // function matchpass(){
+      
+
+    // }
+
+    function matchpass() {
+      alert("You will receive an email to confirm complete registration");
+
+      var firstpassword = document.f1.password.value;
+      var secondpassword = document.f1.password2.value;
+
+      if (firstpassword == secondpassword) {
+        return true;
+      } else {
+        alert("password must be same!");
+        return false;
+      }
+      
+      
+      
+    }
+
+    function myHandler(){
+      alert("Thanks for subscribing");
+    }
+    
+    
+  </script>
+</html>

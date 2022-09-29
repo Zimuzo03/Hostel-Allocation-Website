@@ -1,0 +1,922 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --blue: #00b8b8;
+  --black: #333;
+  --light-color: #666;
+  --light-bg: #eee;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: var(--blue);
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--light-bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+body {
+  height: 100vh;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem 7%;
+  padding-top: 6rem;
+}
+
+.btn {
+  padding: 1.2rem 4rem;
+  font-size: 2.5rem;
+  color: var(--white);
+  border-radius: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  background-color: var(--blue);
+  text-transform: capitalize;
+}
+.btn:hover{
+  color: var(--white);
+  
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+header .logo {
+  color: var(--black);
+  font-size: 2.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 4rem;
+}
+
+header .logo span {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+header .navbar ul li {
+  margin: 0 1rem;
+}
+
+header .navbar ul li a {
+  font-size: 2rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: var(--black);
+}
+
+header #login {
+  border-color: var(--blue);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header #login:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+#signup {
+  border-color: var(--blue);
+  margin: 0 1rem;
+}
+
+#signup:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+header #menu {
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+.button {
+  color: var(--blue);
+  background-color: transparent;
+  font-size: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 2px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 2px);
+  text-align: center;
+  white-space: nowrap;
+  box-shadow:  none;
+  border: 2px solid transparent;
+  
+}
+.btn_2{
+  color: var(--blue);
+  background-color: transparent;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 2px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 2px);
+  text-align: center;
+  white-space: nowrap;
+  box-shadow:  none;
+  border: 2px solid transparent;
+
+}
+
+.btn_3{
+  margin-top: 1.5rem;
+  margin-left: 4rem;
+  padding: 1rem 9rem;
+  border-radius: 1.5rem;
+  background-color: var(--blue);
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--white);
+}
+.btn_3:hover{
+  background-color: #008b8b;
+}
+
+
+
+/* .login-form {
+  height: 100%;
+  width: 100%;
+  top: -120%;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form.popup {
+  top: 0;
+}
+
+.login-form form {
+  background-color: var(--white);
+  width: 37rem;
+  margin-top: 0 2rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.3rem #333;
+  position: relative;
+}
+
+.login-form form label {
+  font-size: 1.7rem;
+}
+
+.login-form form h2 {
+  font-size: 3rem;
+  color: var(--blue);
+  padding: 1rem 0;
+}
+.login-form form .box {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 2rem 0;
+  padding-top: 2rem;
+  border-bottom: 0.2rem solid #666;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.login-form form .box::placeholder {
+  text-transform: capitalize;
+}
+
+.login-form form .box:focus {
+  border-color: var(--black);
+}
+
+.login-form form .box:nth-child(3) {
+  margin-bottom: 5rem;
+}
+
+.login-form form p {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 0.5rem 0;
+  text-transform: none;
+}
+
+.login-form form p a {
+  font-size: 1.5rem;
+  color: red;
+  text-decoration: none;
+}
+
+.login-form form .btn {
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 2rem;
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.login-form form .btn:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.login-form form .fa-times {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.login-form form .fa-times:hover {
+  color: var(--black);
+} */
+
+
+
+.signup-form {
+  height: 100%;
+  width: 100%;
+  top: -120%;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.signup-form.popup {
+  top: 0;
+}
+
+.signup-form form {
+  background-color: var(--white);
+  width: 400px;
+  margin: 100px auto 0px auto;
+  /* margin-top: 0 2rem;
+  padding: 1rem 3rem; */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.3rem #333;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.signup-form form label {
+  font-size: 18px;
+}
+
+.signup-form form h2 {
+  font-size: 3rem;
+  color: var(--blue);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  
+}
+.signup-form form .box {
+  width: 100%;
+  padding: 0.1rem 0;
+  margin: 0.5rem 0;
+  padding-top: 2rem;
+  border-bottom: 0.2rem solid #666;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  color: var(--blue);
+  text-transform: none;
+}
+.signup-form form input#name{
+  width: 300px;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 1.7rem;
+  text-transform: none;
+  
+}
+.signup-form form input#submit{
+  padding: 1.2rem 4rem;
+  font-size: 2.5rem;
+  color: var(--white);
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  background-color: var(--blue);
+  text-transform: none;
+}
+
+.signup-form form .box::placeholder {
+  text-transform: capitalize;
+}
+
+.signup-form form .box:focus {
+  border-color: var(--blue);
+}
+
+.signup-form form .box:nth-child(3) {
+  margin-bottom: 5rem;
+}
+
+.signup-form form p {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 0.5rem 0;
+  text-transform: none;
+}
+
+.signup-form form p a {
+  font-size: 1.5rem;
+  color: red;
+  text-decoration: none;
+}
+
+.signup-form form .btn {
+  width: 100%;
+  margin: 3rem 0;
+  font-size: 2rem;
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.signup-form form .btn:hover {
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+.signup-form form .fa-times {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--blue);
+}
+ 
+.login-form form .fa-times:hover {
+  color: var(--black);
+}
+
+/* .home {
+  background: url(hostelroom.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+} */
+
+.home h1 {
+  font-size: 7rem;
+  color: var(--blue);
+  text-transform: none;
+  align-items: center;
+}
+
+.home p {
+  font-size: 4rem;
+  color: var(--white);
+  padding: 1rem 0;
+  margin: 0 1rem;
+  width: auto;
+  text-transform: none;
+}
+
+
+.home .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  
+}
+.home .text {
+  max-width: 25%;
+  color: #fff;
+  margin: 20% 0 0 10%;
+}
+/* .home h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+.home p {
+  font-weight: 400;
+  line-height: 25px;
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-bottom: 2rem;
+} */
+.home .image_item {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+.home .image_item img {
+  width: 140px;
+  height: 94px;
+  margin: 10px;
+  transition: 0.5s;
+  
+}
+.home .image_item img.active {
+  border: 2px solid #fff;
+}
+.home .box .text {
+  position: relative;
+}
+.home .box .text::after {
+  position: absolute;
+  
+  font-size: 500px;
+  top: -120%;
+  font-weight: bold;
+  opacity: 0.1;
+}
+
+/* .home .content {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  height: 20rem;
+  width: 100%;
+} */
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.services {
+  background-color: var(--light-bg);
+}
+
+.services h3 {
+  font-size: 3rem;
+}
+
+.services i {
+  align-items: center;
+  font-size: 7rem;
+  /* color: var(--bluse); */
+  margin: 0 20px 20px 0;
+  
+}
+
+.services p {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 3rem;
+  transition: .5s;
+}
+
+.services .box-container .box:hover{
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.services .control {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  height: 70rem;
+  width: 40rem;
+}
+
+.gallery{
+  background-color: lightgray;
+}
+
+.gallery h1{
+  text-align: center;
+  font-size: 4rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.gallery p{
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+
+}
+
+
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  
+}
+
+.column{
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+  margin-bottom: 2rem;
+  
+}
+
+.column img{
+  margin-top: 15px;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 2rem;
+
+}
+
+
+
+.top {
+  text-align: center;
+  font-size: 4rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.contact {
+  background-color: var(--white);
+}
+
+.contact i {
+  align-items: center;
+  font-size: 4rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.contact i:hover {
+  color: var(--blue);
+}
+
+.contact p {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.contact h2 {
+  font-size: 6rem;
+  color: var(--blue);
+  text-transform: none;
+}
+
+.contact p {
+  font-size: 2.5rem;
+  color: var(--black);
+  width: auto;
+  padding: 1rem 0;
+  z-index: +1;
+  text-transform: none;
+}
+
+.contact .info {
+  position: relative;
+  bottom: 2rem;
+  height: 25rem;
+  width: 100%;
+}
+
+.position {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: none;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  border-radius: 0.5rem;
+  background-color: var(--light-bg);
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+.contact form .box {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 1rem 1.3rem;
+  color: var(--black);
+}
+
+.contact form span {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.contact .link-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--black);
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.contact .link-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+#footer {
+  background-color: var(--blue);
+}
+#footer .current {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+#footer .current h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+#footer .current h3 {
+  color: var(--white);
+  font-size: 2rem;
+}
+#footer .current input {
+  width: 30rem;
+  height: 6rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 1rem 1.3rem;
+  color: var(--black);
+  font-size: 2rem;
+  text-transform: none;
+}
+.button_1 {
+  width: 30rem;
+  height: 6rem;
+  color: var(--blue);
+ 
+  font-size: 3rem;
+  border-radius: .5rem;
+  background-color: var(--black);
+}
+.button_1:hover {
+  background-color: var(--white);
+}
+
+#footer .credit {
+  text-align: center;
+  border-top: var(--border);
+  padding-top: 3rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--white);
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  header #menu {
+    display: block;
+    transition: .2s linear;
+    
+  }
+  .fa-times{
+    transform: rotate(180deg);
+  }
+  header #login {
+    font-size: 2rem;
+  }
+
+  header .navbar {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    transition: .2s linear;
+  }
+
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .logo{
+    font-size: 2.5rem;
+  }
+
+  header .navbar ul li {
+    margin: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    
+
+    
+  }
+
+  header .navbar ul li a {
+    font-size: 2.5rem;
+    color: var(--blue);
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .navbar ul li a.active {
+    color: var(--blue);
+  }
+  header .navbar ul li a.acive,
+  header .navbar ul li a:hover {
+    color: var(--white);
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  header .navbar.nav-toggle {
+    top: 6.4rem;
+  }
+
+  /* .home {
+    background-position: center;
+    background-size: cover;
+  } */
+
+  /* .home h1 {
+    font-size: 3rem;
+  } */
+
+  /* .heading {
+    font-size: 4rem;
+  }
+} */
+
+/* .home p {
+  font-size: 2rem;
+  color: var(--white);
+  display: flex;
+} */
+
+  .home h1{
+    font-size: 5rem;
+    
+  }
+  .column{
+    flex: 75%;
+    max-width: 75%;
+  }
+}
+.top {
+  font-size: 3rem;
+}
+
+
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .home .box .text{
+    max-width: 50%;
+  }
+  
+  .home .box .text::after,
+  .home .image_item{
+    height: 50%;
+    display: none;
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .logo{
+    font-size: 2.8rem;
+  }
+
+  header .navbar ul li {
+    margin: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    
+
+    
+  }
+  .column{
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}
