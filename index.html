@@ -32,13 +32,12 @@
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <br />
           <li><a href="#contact">Contact</a></li>
           <br />
 
           <a href="Loginpage.html" id="login" class="button">Login</a
           ><br />
-          <div id="signup" class="btn_2">Signup</div>
+          <a href="register.html" id="signup" class="btn_2">Signup</a>
         </ul>
       </nav>
     </header>
@@ -58,22 +57,15 @@
       </form>
     </div> -->
 
-    <div class="signup-form">
+    <!-- <div class="signup-form">
       <form
-        action=""
+        action="signup.html"
         name="f1"
         method="post"
         onsubmit="return matchpass()"
       >
         <h2>Register</h2>
-        <label>Full Name:</label><br />
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Full Name"
-          required
-        /><br /><br />
+        
         <label>Matric Number:</label><br />
         <input
           type="text"
@@ -112,11 +104,10 @@
           id="submit"
           
         />
-        <!-- <a href="" class="btn_3" id="submit"></a> -->
-        <!-- <button onclick="myFunction()" class="btn_3" id="submit">Submit</button> -->
+        
         <i class="fas fa-times"></i>
       </form>
-    </div>
+    </div> -->
 
     <section class="home" id="home">
       <div class="box">
@@ -342,49 +333,26 @@
       line.style.background = change;
     }
 
-    // function validateform() {
-    //   var name = document.myForm.name.value;
-    //   var matric = document.myForm.matric.value;
-    //   var password = document.myForm.psw.value;
-    //   var password1 = document.myForm.user.value;
+    
 
-    //   if (name == null || name == "") {
-    //     alert("Name can't be blank");
-    //     return false;
-    //   } else if (password.length < 6) {
-    //     alert("Password must be at least 6 characters long.");
+    // function matchpass() {
+      
+
+    //   var firstpassword = document.f1.password.value;
+    //   var secondpassword = document.f1.password2.value;
+
+    //   if (firstpassword == secondpassword) {
+    //     return true;
+    //   } else {
+    //     alert("password must be same!");
     //     return false;
     //   }
+      
+      
+      
     // }
 
-    // function myFunction() {
-    //   alert("You will receive an email to confirm complete registration");
-    // }
-    // function matchpass(){
-      
-
-    // }
-
-    function matchpass() {
-      alert("You will receive an email to confirm complete registration");
-
-      var firstpassword = document.f1.password.value;
-      var secondpassword = document.f1.password2.value;
-
-      if (firstpassword == secondpassword) {
-        return true;
-      } else {
-        alert("password must be same!");
-        return false;
-      }
-      
-      
-      
-    }
-
-    function myHandler(){
-      alert("Thanks for subscribing");
-    }
+    
     
     
   </script>

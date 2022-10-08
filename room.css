@@ -11,36 +11,11 @@
   }
   
   body{
-    height: 100vh;
+    height: 8vh;
+   
   }
 
-  /* header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 7%;
-    background: var(--white);
-    box-shadow: var(--box-shadow);
-    position: fixed;
-    z-index: 1000;
-    top: 0; 
-    left: 0;
-    margin-bottom: 50rem;
-}
-
-header .logo{
-    color: var(--black);
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-header .logo span {
-  color: var(--blue);
-  text-transform: uppercase;
-} */
+  
 header h1{
   color: var(--blue);
   margin-top: 40px;
@@ -91,7 +66,7 @@ header h1{
     border: 1rem solid var(--white);
     border-radius: .5rem;
     flex: 1 1 22.3rem;
-    height: 23rem;
+    height: 17rem;
     position: relative;
   }
   
@@ -117,7 +92,7 @@ header h1{
   }
   
   .gallery .box-container .box .current h3{
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     color: var(--blue);
     font-weight: bold;
    
@@ -126,12 +101,12 @@ header h1{
   
   .gallery .box-container .box .current p{
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     
   } 
 
   .gallery .box-container .box .current h4{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--blue);
   }
   
@@ -177,112 +152,7 @@ header h1{
 }
 
 
-.hostel-form {
-  height: 100%;
-  width: 100%;
-  top: -120%;
-  left: 0;
-  position: fixed;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.hostel-form.popup {
-  top: 0;
-}
-
-.hostel-form form {
-  background-color: var(--white);
-  width: 400px;
-  margin: 100px auto 0px auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.1rem 0.3rem #333;
-  position: relative;
-}
-.hostel-form form h4{
-  margin: 10px;
-  padding-left: 1.5rem;
-  padding-bottom: 10px;
-}
-
-
-.hostel-form form h2 {
-  font-size: 2rem;
-  color: var(--blue);
-  padding: 1rem 0;
-  padding-left: 70px;
-}
-.hostel-form form .box {
-  width: 26rem;
-  padding: 1rem 0;
-  margin: 2rem 0;
-  padding-top: 2rem;
-  border-bottom: 0.2rem solid #666;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.9rem;
-  color: var(--black);
-  text-transform: none;
-}
-
-.hostel-form form .box::placeholder {
-  text-transform: capitalize;
-}
-
-.hostel-form form .box:focus {
-  border-color: var(--black);
-}
-
-.hostel-form form .box:nth-child(3) {
-  margin-bottom: 5rem;
-}
-
-.btn_1{
-  width: 10rem;
-  height: 3.5rem;
-  color: var(--white);
-  margin-bottom: 10px;
-  margin-left: 70px;
-  font-size: 1.8rem;
-  border-radius: .5rem;
-  background-color: var(--blue);
-}
-
-
-
-
-
-
-.hostel-form form .fa-times {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: var(--blue);
-}
-
-.hostel-form form .fa-times:hover {
-  color: var(--black);
-}
-
-
-
-@media (max-width: 768px) {
-  html {
-    font-size: 72%;
-  }
-  #footer #timer{
-    font-size: 3rem;
-  }
-  #footer .container{
-    font-size: 3rem;
-  }
-  
-}
 @media (max-width: 600px) {
   html {
     font-size: 60%;

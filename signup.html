@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      body{
+        background-color: silver;
+      }
+      .center {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        background-color: #fff;
+        height: 30rem;
+        width: 35rem;
+        
+        
+      }
+      .header {
+        height: 100px;
+        background: #27ae60;
+        overflow: hidden;
+        border-radius: 3px 3px 0 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+      }
+      .header h2 {
+        color: #fff;
+        padding-left: 32px;
+        font-weight: normal;
+        font-size: 3rem;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 2rem;
+      }
+
+      .fa-check {
+        font-size: 70px;
+        color: #27ae60;
+        font-weight: bold;
+        height: 120px;
+        width: 120px;
+        border: 1.5px solid #27ae60;
+        align-items: center;
+        text-align: center;
+        padding-top: 13px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        margin: 30px 0 0 180px;
+      }
+      p {
+        padding-top: 2rem;
+        font-size: 2.5rem;
+        color: #1a1a1a;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+      .close-btn {
+        position: absolute;
+        bottom: 12px;
+        right: 25px;
+        border: 1px solid #27ae60;
+        border-radius: 3px;
+        color: #27ae60;
+        padding: 8px 10px;
+        font-size: 2rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .close-btn:hover {
+        background: #27ae60;
+        color: #fff;
+        transition: 0.5s;
+      }
+      @media (max-width: 768px){
+        .header{
+          height: 50px;
+        }
+        .center{
+          top: 10%; left: 20%;
+          height: 15rem;
+          width: 25rem;
+        }
+        .header h2{
+          font-size: 1.5rem;
+          margin-top: 10px;
+        }
+        .fa-check{
+          font-size: 40px;
+          width: 50px;
+          height: 50px;
+          padding-top: 3px;
+        }
+        p{
+          font-size: 1.5rem;
+          padding-top: 10px;
+        }
+        .close-btn{
+          font-size: 15px;
+        }
+      }
+      
+    </style>
+    <div class="center">
+      <div class="content">
+        <div class="header">
+          <h2>Signup</h2>
+        </div>
+        <label for="click" class="fas fa-check"></label>
+        <p>Registration Successful</p>
+        <a href="index.html" class="close-btn">Close</a>
+      </div>
+    </div>
+  </body>
+</html>

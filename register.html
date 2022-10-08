@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="reg.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">
+            <h2>Register</h2>
+        </div>
+        <form action="signup.html" class="form" name="f1" method="post" onsubmit="return matchpass()">
+            <div class="form-control">
+                <label for="matric" name="matric">Maric Number</label>
+                <input type="text" name="matric" required>
+                <small>Error Message</small>
+
+            </div>
+            <div class="form-control">
+                <label for="email" name="email">Email Address</label>
+                <input type="email" name="email" required>
+                <small>Error Message</small>
+
+            </div>
+            <div class="form-control">
+                <label for="pwd" name="pwd">Password</label>
+                <input type="password" name="pwd" required>
+                <small>Error Message</small>
+
+            </div>
+            <div class="form-control">
+                <label for="psw" name="psw">Confirm Password</label>
+                <input type="password" name="psw" required>
+                <small>Error Message</small>
+
+            </div>
+            <div class="form-control">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function matchpass() {
+      
+          var firstpassword = document.f1.pwd.value;
+          var secondpassword = document.f1.psw.value;
+  
+        if (firstpassword == secondpassword) {
+          return true;
+        } else {
+          alert("password must be same!");
+          return false;
+        } 
+      }
+    </script>
+  </body>
+</html>
