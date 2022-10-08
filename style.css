@@ -672,7 +672,7 @@ header #menu {
 
 @media (max-width: 768px) {
   html {
-    font-size: 60%;
+    font-size: 45%;
   }
 
   header #menu {
@@ -801,7 +801,7 @@ header #menu {
 }
 @media (max-width: 950px) and (orientation: landscape){
   html {
-    font-size: 50%;
+    font-size: 44%;
   }
 
   header #menu {
@@ -882,7 +882,7 @@ header #menu {
 
 @media (max-width: 800px) and (orientation: landscape){
   html{
-    font-size: 40%;
+    font-size: 29%;
   }
   header #menu {
     display: block;
