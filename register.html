@@ -1,68 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Signup</title>
-    <link rel="stylesheet" href="reg.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="reg.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>Signup</header>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-  </head>
-  <body>
-    <div class="container">
-        <div class="header">
-            <h2>Register</h2>
+    <form action="success.html">
+      <div class="field matric-field">
+        <div class="input-field">
+          <input type="text" placeholder="Enter your matric number..." required>
         </div>
-        <form action="signup.html" class="form" name="f1" method="post" onsubmit="return matchpass()">
-            <div class="form-control">
-                <label for="matric" name="matric">Matric Number</label>
-                <input type="text" name="matric" required>
-                <small>Error Message</small>
+        <span class="error matric-error">
+          <i class="fa fa-exclamation-circle error-icon"></i>
+          <p class="error-text">Matric Number is Required</p>
+        </span>
+      </div>
 
-            </div>
-            <div class="form-control">
-                <label for="email" name="email">Email Address</label>
-                <input type="email" name="email" required>
-                <small>Error Message</small>
+      <div class="field email-field">
+        <div class="input-field">
+          <input type="email" placeholder="example@gmail.com..." class="email">
+        </div>
+        <span class="error email-error">
+          <i class="fa fa-exclamation-circle error-icon"></i>
+          <p class="error-text">Email Address is Reqired</p>
+        </span>
+      </div>
 
-            </div>
-            <div class="form-control">
-                <label for="pwd" name="pwd">Password</label>
-                <input type="password" name="pwd" required>
-                <small>Error Message</small>
+      <div class="field create-password">
+        <div class="input-field">
+          <input type="password" placeholder="Create Password..." class="password">
+          <i class="fa-solid fa-eye-slash show-hide"></i>
+        </div>
+        <span class="error password-error">
+          <i class="fa fa-exclamation-circle error-icon"></i>
+          <p class="error-text">Please enter atleast 8 characters with number, 
+            symbol, small and capital letter.</p>
+        </span>
+      </div>
 
-            </div>
-            <div class="form-control">
-                <label for="psw" name="psw">Confirm Password</label>
-                <input type="password" name="psw" required>
-                <small>Error Message</small>
+      <div class="field confirm-password">
+        <div class="input-field">
+          <input type="password" placeholder="Confirm Password..." class="cPassword">
+          <i class="fa-solid fa-eye-slash show-hide"></i>
+        </div>
+        <span class="error cPassword-error">
+          <i class="fa fa-exclamation-circle error-icon"></i>
+          <p class="error-text">Password don't match</p>
+        </span>
+      </div>
 
-            </div>
-            <div class="form-control">
-                <button>Submit</button>
-            </div>
-        </form>
-    </div>
-    <script>
-        function matchpass() {
-      
-          var firstpassword = document.f1.pwd.value;
-          var secondpassword = document.f1.psw.value;
-  
-        if (firstpassword == secondpassword) {
-          return true;
-        } else {
-          alert("password must be same!");
-          return false;
-        } 
+      <div class="input-field button">
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.querySelector("form"),
+      // matricField = form.querySelector(".matric-field"),
+      emailField = form.querySelector(".email-field"),
+      emailInput = emailField.querySelector(".email"),
+      passField = form.querySelector(".create-password"),
+      passInput = passField.querySelector(".password"),
+      cPassField = form.querySelector(".confirm-password"),
+      cPassInput = cPassField.querySelector(".cPassword");
+
+    // Email Validation //
+    function checkEmail(){
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if(!emailInput.value.match(emailPattern)){
+        return emailField.classList.add("invalid"); // add invalid to empty email box//
       }
-    </script>
-  </body>
+      emailField.classList.remove("invalid"); // remove invalid to empty email box//
+
+    }
+
+    //Hide and show password//
+    const eyeIcons = document.querySelectorAll(".show-hide");
+    eyeIcons.forEach(eyeIcon => {
+      eyeIcon.addEventListener("click", () => {
+        const pInput = eyeIcon.parentElement.querySelector("input");
+        
+        if(pInput.type === "password"){
+          eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+          return (pInput.type = "text");
+
+        }
+        eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+          return (pInput.type = "password");
+      })
+    });
+
+    //Password Validation//
+    function createPass(){
+      const passPatern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if(!passInput.value.match(passPatern)){
+        return passField.classList.add("invalid"); //adding invalid to empty password box//
+      }
+      passField.classList.remove("invalid");
+
+    }
+
+    //confirm password//
+    function confirmPass(){
+      if(passInput.value !== cPassInput.value || cPassInput.value === ""){
+        return cPassField.classList.add("invalid");
+        
+      }
+      cPassField.classList.remove("invalid");
+      
+    }
+
+    // Calling function on Form Submit //
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); //preventing form submitting
+      checkEmail();
+      createPass();
+      confirmPass();
+
+      emailInput.addEventListener("keyup", checkEmail);
+      passInput.addEventListener("keyup", createPass);
+      cPassInput.addEventListener("keyup", confirmPass);
+
+      if(
+        !emailField.classList.contains("invalid") &&
+        !passField.classList.contains("invalid") &&
+        !cPassField.classList.contains("invalid")
+      ){
+        location.href = form.getAttribute("action");
+
+      }
+    });
+
+    
+    
+  </script>
+  
+</body>
 </html>

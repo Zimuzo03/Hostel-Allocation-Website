@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Successful</title>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .container{
+        width: 300px;
+        height: 50vh;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #00b8b8;
+        text-align: center;
+    }
+    .top{
+        height: 25vh;
+        width: 100%;
+        background-color: #00b8b8;
+        color: #fff;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .fa-regular{
+        font-size: 60px;
+        margin-top: 7vh;
+    }
+    h3{
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    p{
+        margin-top: 5vh;
+        padding: 0px 10px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    a{
+        border: none;
+        border-radius: 5px;
+        padding: 10px 35px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #00b8b8;
+    }
+    a:hover{
+        background-color: #008b8b;
+        cursor: pointer;
+    }
+    @media (max-width: 768px) and (orientation: landscape){
+        .container{
+            height: 110px;
+        }
+        .bottom{
+            height: 15vh;
+        }
+    }
+
+    
+
+    @media (max-width:950px) and (orientation: landscape){
+        body{
+            height: 150vh;
+        }
+        
+        .container{
+            height: 220px;
+        }
+        
+        .top{
+            height: 25vh;
+        }
+        .bottom{
+            height: 20px;
+        }
+        .fa-regular{
+            font-size: 40px;
+            margin-top: 10px;
+
+        }
+        h3{
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+
+    }
+    @media (max-width: 800px) and (orientation: landscape){
+        .container{
+            height: 320px;
+        }
+        .top{
+            height: 35vh;
+        }
+        .bottom{
+            height: 20vh;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="top">
+            <i class="fas fa-regular fa-circle-check"></i>
+            <h3>SUCCESS</h3>
+        </div>
+        <div class="bottom">
+            <p>Congraulations, your account has been successfully been created</p>
+            <a href="room.html">Continue</a>
+        </div>
+    </div>
+    
+</body>
+</html>
