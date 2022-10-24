@@ -10,6 +10,10 @@ body {
   color: gray;
 }
 
+html{
+  font-size: 62.5%;
+}
+
 :root{
  --white: #fff;
  --blue: #00b8b8;
@@ -275,7 +279,6 @@ font-size: 2rem;
   color: var(--white);
   padding-bottom: 2rem;
 }
-
 
 
 @media (max-width: 991.98px) {
