@@ -141,7 +141,7 @@ header #signup:hover {
 .button {
   color: var(--blue);
   background-color: transparent;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   border-radius: 2rem;
   cursor: pointer;
   justify-content: center;
@@ -157,7 +157,7 @@ header #signup:hover {
 .btn_2 {
   color: var(--blue);
   background-color: transparent;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   border-radius: 1.5rem;
   cursor: pointer;
   justify-content: center;
@@ -173,6 +173,22 @@ header #signup:hover {
 
 #menu-btn{
     display: none;
+}
+
+#scroll-btn{
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--black);
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
 }
 
 .slideshow-container .mySlides img{
@@ -334,7 +350,7 @@ header #signup:hover {
 }
 
 .apply .box-container .box:hover{
-  transform: translateY(-20px);
+  transform: translateY(-40px);
 }
 
 
@@ -553,6 +569,20 @@ header #signup:hover {
 .button_1:hover {
   background-color: var(--white);
 }
+.uil{
+  padding: 20px;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: var(--blue);
+  background-color: #fff;
+}
+
+.uil:hover{
+  background-color: #333;
+}
 
 #footer .credit {
   text-align: center;
@@ -699,6 +729,12 @@ header #signup:hover {
       .text{
         margin-left: 1rem;
       }
+
+      .contact .container{
+        margin-left: 2rem;
+        margin-right: 0px;
+      }
+      
 }
 
 
